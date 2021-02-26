@@ -10,8 +10,11 @@ public class MainAuto {
 		clioVerde.canidadCombustible = 10f;
 		clioVerde.chasis=123456789l;
 		clioVerde.color="verde";
-		clioVerde.marca="renault";
-		clioVerde.modelo="clio";
+		
+		// clioVerde.marca="renault";
+		clioVerde.setMarca("renault");
+		
+		clioVerde.setModelo("clio");
 		//clioVerde.velocidad=0f;
 		
 		clioVerde.informar();//f3
