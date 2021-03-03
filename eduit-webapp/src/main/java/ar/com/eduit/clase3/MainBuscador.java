@@ -1,5 +1,7 @@
 package ar.com.eduit.clase3;
 
+import ar.com.eduit.clase4.BuscadorGeneral;
+
 public class MainBuscador {
 
 	public static void main(String[] args) {
@@ -7,7 +9,7 @@ public class MainBuscador {
 		String claveBusquedaIngresadaPorElUsuario = "iron man";
 
 		//crear una instancia de buscador SI
-		Buscador buscador = new Buscador();
+		Buscador buscador = new BuscadorGeneral();
 		buscador.setClaveBusqueda(claveBusquedaIngresadaPorElUsuario);
 		
 		//ejecuto la busqueda

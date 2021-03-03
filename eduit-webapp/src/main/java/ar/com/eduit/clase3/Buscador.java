@@ -1,39 +1,30 @@
 package ar.com.eduit.clase3;
 
-public class Buscador {
+import ar.com.eduit.clase4.FiltroPrecio;
+import ar.com.eduit.clase4.IFiltro;
 
+public abstract class Buscador {
+
+	protected IFiltro[] filtros = new IFiltro[0];
+	
 	private String claveBusqueda;
 	
 	private Articulo[] resultados;
 	
 	private Integer total;
 
-	public final void buscar() {
+	public abstract void buscar();
+	
+	public void actualizarResultado(Articulo articulo) {
+		this.resultados = new Articulo[1];
+		this.resultados[0] = articulo;
 		
-		//SIMULAR la busqueda en db, excel, nobe etc etc..
-		
-		//select * from articulo where titulo like ''
-		
-		//libro
-		//Padre p = new Hijo();
-		Articulo resultado1 = new Libro("TONY STAR IRON MAN 01: UN..." , 760f, "SLOTT, DAN", "9786076343043");
-		//pelicula
-		Articulo resultado2 = new Pelicula("INVENCIBLE IRON MAN, EL ...", 1325f, "BENDIS, BRIAN MICHAEL", "THE WALT DISNEY COMPANY","Marvel Studios (The Avengers: Los Vengadores de Marvel) lanza la mejor aventura de Iron Man hasta ahora; un fenómeno global sin precedentes...");
-		//pasatiempo
-		Articulo resultado3 = new Pasatiempo("IRON MAN 15 CENTIMETROS -", 1117.99f, "" , "Hasbro");
-		//musica
-		String[] temas = new String[] {"SHOOT OT THRILL", "ROCK N ROLL DAMNATION"};		
-		Articulo resultado4 = new Musica("IRON MAN 2 (STANDARD)", 1033f, "AC/DC", "SONY MUSIC", temas );
-				
-		//vectores/array!!!
-		this.resultados = new Articulo[4];
-		//0,1,2,3
-		this.resultados[0] = resultado1;
-		this.resultados[1] = resultado2;
-		this.resultados[2] = resultado3;
-		this.resultados[3] = resultado4;
-		
-		this.total = this.resultados.length;		
+		this.total = this.resultados.length;
+	}
+	
+	public void actualizarResultado(Articulo[] articulos) {
+		this.resultados = articulos;
+		this.total = this.resultados.length;
 	}
 	
 	public String getClaveBusqueda() {
@@ -54,5 +45,42 @@ public class Buscador {
 		}
 		return this.total;
 	}
+
+	public void filtrarResultados(Float min, Float max) {		
+		//creamos el filtro
+		FiltroPrecio filtro = new FiltroPrecio(min, max);
+		this.resultados = filtro.filtrar(this.resultados);
+	}
 	
+	public void addFiltro(IFiltro filtro) {	
+		if(filtro != null) {
+			IFiltro[] nuevosFiltros = new IFiltro[this.filtros.length+1];
+			int i=0;
+			for(IFiltro filtroInterno : this.filtros) {
+				nuevosFiltros[i++] = filtroInterno;
+			}
+			nuevosFiltros[i] = filtro;
+			this.filtros = nuevosFiltros; 
+		}
+	}
+	
+	public void aplicarFiltros() {
+		if(this.tieneFiltros()) {
+			//aplicamos los filtros!
+			Articulo[] resultadosFiltrados = new Articulo[this.resultados.length];
+			int i=0;
+			for(IFiltro filtro : this.filtros) {								
+				Articulo[] filtrados = filtro.filtrar(this.resultados);//POLIMORFISMO
+				
+				for(Articulo aux : filtrados) {
+					resultadosFiltrados[i++] = aux;
+				}
+			}
+			this.resultados = resultadosFiltrados;
+		}
+	}
+	
+	public boolean tieneFiltros() {
+		return this.filtros.length > 0;
+	}
 }
