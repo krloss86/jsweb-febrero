@@ -6,4 +6,12 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>eduit-webapp</artifactId>
+  
+  <dependencies>
+  	<dependency>
+  		<groupId>ar.com.eduit</groupId>
+  		<artifactId>eduit-domain</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  </dependencies>
 </project>

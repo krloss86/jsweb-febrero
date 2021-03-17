@@ -2,9 +2,9 @@ package ar.com.eduit.clase6;
 
 public enum Formato {
 
-	CSV,//0
+	PDF,//0
 	XLS,//1//alt+shit+r
-	PDF;//2
+	CSV;//2
 	
 	public static Formato getFormatoByString(String formatoBuscado) {
 		Formato formato;
