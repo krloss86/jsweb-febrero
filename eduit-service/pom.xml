@@ -1,0 +1,18 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>ar.com.eduit</groupId>
+    <artifactId>eduit-parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>eduit-service</artifactId>
+  <name>capa de sercicio del proyecto jsweb</name>
+  <dependencies>
+  	<!-- agrego la dependencia dao -->
+  	<dependency>
+  		<groupId>ar.com.eduit</groupId>
+  		<artifactId>eduit-dao</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  </dependencies>
+</project>

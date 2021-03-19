@@ -14,7 +14,7 @@ public class CreateProductoController {
 		
 		String titulo = "lg k50";
 		Float precio = 30000f;
-		String codigo = "000500";
+		String codigo = "000700";
 		Long tipoProducto = 1L; //celulares
 		
 		Producto nuevoProducto = new Producto(titulo, precio, codigo, tipoProducto);

@@ -15,5 +15,7 @@
   <modules>
   	<module>eduit-webapp</module>
   	<module>eduit-domain</module>
+  	<module>eduit-service</module>
+  	<module>eduit-dao</module>
   </modules>
 </project>
