@@ -69,4 +69,13 @@ public class ProductoServiceImpl implements ProductoService {
 			throw new ServiceException("No se ha podido crear el producto", e);
 		}
 	}
+
+	@Override
+	public Collection<Producto> buscarProducto(String claveBusqueda) throws ServiceException {
+		try {
+			return this.dao.findAllByTitulo(claveBusqueda);
+		} catch (GenericException e) {
+			throw new ServiceException("No se ha podido obtener listado", e);
+		}
+	}
 }

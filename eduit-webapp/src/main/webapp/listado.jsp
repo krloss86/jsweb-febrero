@@ -16,6 +16,14 @@
 <body>
 	<div class="container">
 		<div class="row">
+			<a href="<%=request.getContextPath()%>/LogoutServlet" 
+				class="btn btn-primary btn-lg active" 
+				role="button" 
+				aria-pressed="true">
+					Logout
+			</a>
+		</div>
+		<div class="row">
 			<div class="col-sm-12 col-md-9 col-lg-6 col-xl-4">
 				<table class="table">
 					<thead>
