@@ -78,4 +78,13 @@ public class ProductoServiceImpl implements ProductoService {
 			throw new ServiceException("No se ha podido obtener listado", e);
 		}
 	}
+	
+	@Override
+	public void actualizarProducto(Producto producto) throws ServiceException {
+		try {
+			this.dao.update(producto);
+		} catch (DuplicatedException | GenericException e) {
+			throw new ServiceException("Error interno, no se ha podido actualizar el producto, por favor reintente", e);
+		}
+	}
 }

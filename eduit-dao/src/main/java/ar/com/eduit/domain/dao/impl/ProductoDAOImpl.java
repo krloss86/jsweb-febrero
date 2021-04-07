@@ -273,7 +273,7 @@ public class ProductoDAOImpl implements ProductoDAO {
 			pst.setLong(2, productoBuscado.getTipoProducto());
 			pst.setString(3, productoBuscado.getTitulo());
 			pst.setString(4, productoBuscado.getCodigo());
-			pst.setLong(1, productoBuscado.getId());
+			pst.setLong(5, productoBuscado.getId());
 			
 			int resultado = pst.executeUpdate();
 			if(resultado < 0) {

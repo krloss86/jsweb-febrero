@@ -9,11 +9,16 @@ public enum ParameterEnum {
 	LISTADO("listado"), 
 	ERROR("error"), 
 	TITULO("titulo"),
-	PRECIO("precio"), CODIGO("codigo"), 
+	PRECIO("precio"), 
+	CODIGO("codigo"), 
 	TIPO_PRODUCTO("tipoProducto"), 
 	EXITO("exito"), 
 	ID_PRODUCTO("id"), 
-	PRODUCTO("producto");
+	PRODUCTO("producto"), 
+	TOTAL_LISTADO("total"), 
+	TITULO_FILTRO("tituloFiltro"), 
+	PRECIO_FILTRO("precioFiltro"), 
+	TIPO_PRODUCTO_FILTRO("tipoProductoFiltro");
 	
 	private String param;
 	

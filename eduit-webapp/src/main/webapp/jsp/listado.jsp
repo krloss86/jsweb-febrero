@@ -51,20 +51,20 @@
 			<div class="row">
 				<div class="col-12 mt-2">
 					<form class="form-inline" action="<%=request.getContextPath() %>/BuscarProductosServlet" method="post">
-				  		<input type="hidden" name="titulo" value="<%=request.getAttribute("claveBusqueda")%>">
+				  	  <input type="hidden" name="claveBusqueda" value="<%=request.getParameter("claveBusqueda")%>">
 					  <div class="form-group">
-					    <label for="titulo">Título</label>
-					    <input name="titulo" type="text" class="form-control" id="titulo">
+					    <label for="tituloFiltro">Título</label>
+					    <input name="tituloFiltro" type="text" class="form-control" id="tituloFiltro">
 					  </div>
 					  
 					  <div class="form-group">
-					    <label for="precio">Precio</label>
-					    <input name="precio" type="text" class="form-control" id="precio">
+					    <label for="precioFiltro">Precio</label>
+					    <input name="precioFiltro" type="text" class="form-control" id="precioFiltro">
 					  </div>
 					  
 					  <div class="form-group">
-					    <label for="tipoProducto">Tipo Producto</label>
-					    <select name="tipoProducto" class="form-control" id="tipoProducto">
+					    <label for="tipoProductoFiltro">Tipo Producto</label>
+					    <select name="tipoProductoFiltro" class="form-control" id="tipoProductoFiltro">
 					      <option value="1">Herramientas</option>
 					      <option value="2">Electrodomesticos</option>
 					    </select>
@@ -103,7 +103,7 @@
 						<% } %>
 							<tr>
 								<td colspan="3" align="right">Total</td>
-								<td> <%=request.getAttribute("sumaTotal") %> </td>
+								<td> <%=request.getAttribute(ParameterEnum.TOTAL_LISTADO.getParam()) %> </td>
 								<td></td>
 								<td></td>
 							</tr>

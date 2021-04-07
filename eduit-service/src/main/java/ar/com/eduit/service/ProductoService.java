@@ -17,5 +17,7 @@ public interface ProductoService {
 
 	public Producto crearProducto(Producto nuevoProducto) throws ServiceException;
 
-	public Collection<Producto> buscarProducto(String claveBusqueda) throws ServiceException; 
+	public Collection<Producto> buscarProducto(String claveBusqueda) throws ServiceException;
+
+	public void actualizarProducto(Producto producto) throws ServiceException;
 }

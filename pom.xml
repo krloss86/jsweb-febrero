@@ -18,6 +18,5 @@
   	<module>eduit-domain</module>
   	<module>eduit-service</module>
   	<module>eduit-dao</module>
-    <module>eduit-webapp-v2</module>
   </modules>
 </project>
