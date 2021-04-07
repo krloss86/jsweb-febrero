@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>ar.com.eduit</groupId>
 		<artifactId>eduit-parent</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<version>1.0.0-RC1</version>
 	</parent>
 	<artifactId>eduit-domain</artifactId>
 	<name>proyecto que contiene las clases que representan tablas en la db</name>

@@ -3,7 +3,7 @@
   <parent>
     <groupId>ar.com.eduit</groupId>
     <artifactId>eduit-parent</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0-RC1</version>
   </parent>
   <artifactId>eduit-dao</artifactId>
   <name>capa de daos</name>
@@ -22,7 +22,7 @@
   	<dependency>
   		<groupId>ar.com.eduit</groupId>
   		<artifactId>eduit-domain</artifactId>
-  		<version>0.0.1-SNAPSHOT</version>
+  		<version>1.0.0-RC1</version>
   	</dependency>
   </dependencies>
 </project>

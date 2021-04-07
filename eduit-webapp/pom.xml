@@ -3,7 +3,7 @@
   <parent>
     <groupId>ar.com.eduit</groupId>
     <artifactId>eduit-parent</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0-RC1</version>
   </parent>
   <packaging>war</packaging>
   <artifactId>eduit-webapp</artifactId>
@@ -12,7 +12,7 @@
   	<dependency>
   		<groupId>ar.com.eduit</groupId>
   		<artifactId>eduit-service</artifactId>
-  		<version>0.0.1-SNAPSHOT</version>
+  		<version>1.0.0-RC1</version>
   	</dependency>
 	<!-- https://mvnrepository.com/artifact/javax.servlet.jsp/javax.servlet.jsp-api -->
 	<dependency>
