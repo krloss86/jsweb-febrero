@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>ar.com.eduit</groupId>
+  <artifactId>eduit-parent</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>configuracion base</name>
+  
+  <!-- version 11 de java ctrl+s -->
+  <properties>
+  	<maven.compiler.source>11</maven.compiler.source>	
+  	<maven.compiler.target>11</maven.compiler.target>
+  </properties>
+  
+  <modules>
+  	<module>eduit-webapp</module>
+  	<module>eduit-domain</module>
+  	<module>eduit-service</module>
+  	<module>eduit-dao</module>
+  </modules>
+</project>
